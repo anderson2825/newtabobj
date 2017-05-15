@@ -26,7 +26,7 @@
                   _this.currentChange($(this));
             })
              _this.tabRight.bind(_this.defaults.type,function(){
-             	 var tablen=_this.tabCon.size();
+             	 var tablen=_this.tabCon.length;
       	 	       _this.loop++;
       	 	  	  if(_this.loop>=tablen){
       	 	  	  	  _this.loop=0;
@@ -34,7 +34,7 @@
       	 	  	  _this.currentChange(_this.tabNav.eq(_this.loop));
       	 	  })
               _this.tabLeft.bind(_this.defaults.type,function(){
-             	 var tablen=_this.tabCon.size();
+             	 var tablen=_this.tabCon.length;
       	 	       if(_this.loop==0){
       	 	  	  	  _this.loop=tablen-1;
       	 	  	  }else{
@@ -86,7 +86,7 @@
              }
       	 },
       	 autoplay:function(_this){
-      	 	  var tablen=this.tabCon.size();
+      	 	  var tablen=this.tabCon.length;
       	 	  this.timer=setInterval(function(){
       	 	  	  _this.loop++;
       	 	  	  if(_this.loop>=tablen){
